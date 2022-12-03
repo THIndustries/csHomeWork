@@ -32,9 +32,8 @@ int num2 = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите третье число: ");
 int num3 = Convert.ToInt32(Console.ReadLine());
 
-int max = num1;
-
-if(num1 > max) 
+int max = 0;
+if(num1 > max)
     max = num1;
 if(num2 > max)
     max = num2;
@@ -66,19 +65,17 @@ else
 Console.Write("Введите своё целое число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
+Console.Write("А вот и числа: ");
+
 int current = 1;
 
 while(current <= num)
 {
     if(current % 2 == 0)
     {
-        Console.Write(current + " ");
-        current = current + 1;
+        Console.Write(current + " ");        
     }
-    else
-    {
-        current = current + 1;
-    }
+     current = current + 1;
   
 }
 */
