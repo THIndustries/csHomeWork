@@ -1,84 +1,79 @@
-﻿//Задача 1.
-//Напишите программу, которая на вход принимает два числа и выдаёт, какое число большее, а какое меньшее.
+﻿//Задача 10: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
 /*
-Console.Write("Введите первое чило число: ");
-int num1 = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите второе чило число: ");
-int num2 = Convert.ToInt32(Console.ReadLine());
-
-if(num1 > num2)
+Console.Clear();
+int SeccondNum(int arg1)
 {
-    Console.WriteLine("Max = " + num1);
-    Console.WriteLine("Min = " + num2);
+    int needNum = (arg1 / 10) % 10;
+    return needNum;
+}
+
+Console.WriteLine("Сейчас я сделаю с вашим числом магию.");
+Console.Write("Введите своё трехзначное целое число: ");
+int number = Convert.ToInt32(Console.ReadLine()); 
+if(number >= 100 && number <1000)
+{
+    int result = SeccondNum(number);
+    Console.Write($"Вторая цифра от вашего числа: {result}");
 }
 else
 {
-    Console.WriteLine("Max = " + num2);
-    Console.WriteLine("Min = " + num1);
+    Console.Write("Вы ввели не трехзначное число, попробуйте ещё раз.");
 }
 */
 
-//-------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------------------------
 
-//Задача 2.
-//Напишите программу, которая принимает на вход три числа и выдаёт максимальное из этих чисел.
+//Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
 /*
-Console.Write("Введите первое число: ");
-int num1 = Convert.ToInt32(Console.ReadLine());
-
-Console.Write("Введите второе число: ");
-int num2 = Convert.ToInt32(Console.ReadLine());
-
-Console.Write("Введите третье число: ");
-int num3 = Convert.ToInt32(Console.ReadLine());
-
-int max = num1;
-
-if(num1 > max) 
-    max = num1;
-if(num2 > max)
-    max = num2;
-if(num3 > max)
-    max = num3;
-
-Console.Write("Максимальное число = " + max);
-*/
-
-//---------------------------------------------------------------------------------------------------------------
-
-//Задача 3.
-//Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
-/*
-Console.Write("Введите число: ");
-int num = Convert.ToInt32(Console.ReadLine());
-
-if (num % 2 == 0)
-    Console.Write("Это число четное.");
-else
-    Console.Write("Это число не четное.");
-*/
-
-//-----------------------------------------------------------------------------------------------------------------
-
-//Задача 4.
-//Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
-/*
-Console.Write("Введите своё целое число: ");
-int num = Convert.ToInt32(Console.ReadLine());
-
-int current = 1;
-
-while(current <= num)
+Console.Clear();
+int CutNumber(int arg)
 {
-    if(current % 2 == 0)
+    int thirdNum = 0;
+        while(arg > 999 || arg < 100)
     {
-        Console.Write(current + " ");
-        current = current + 1;
+        if (arg > 999)
+        {
+            arg = arg / 10;
+        }
+        if (arg < 100)
+        {
+            return -1;
+        }
+    
     }
-    else
-    {
-        current = current + 1;
-    }
-  
+    thirdNum = arg % 10;
+    return thirdNum;    
 }
+
+Console.Write("Введите целое число: ");
+int num = Convert.ToInt32(Console.ReadLine());
+int result = CutNumber(num);
+Console.Write("Нужное число: " + result);
+*/
+
+//--------------------------------------------------------------------------------------------------------------------
+
+//Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, 
+//является ли этот день выходным.
+/*
+Console.Clear();
+bool Weekends(int arg)
+{
+    while(arg > 0 && arg < 8)
+    {
+        if(arg == 6 || arg == 7)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    return false;
+}
+Console.Write("Введите цифру от 1 до 7: ");
+int weekNum = Convert.ToInt32(Console.ReadLine());
+bool result = Weekends(weekNum);
+Console.WriteLine(result);
 */
