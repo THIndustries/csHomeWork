@@ -106,24 +106,24 @@ Console.WriteLine("Это число четное? Ответ: " + currNum);
 
 //Задача 4.
 //Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
-Console.Clear();
-void NNum(int arg)
-{
-    int current = 1;    
-    while(current <= arg)
-    {        
-        if(current % 2 == 0)
-     {
-         Console.Write(current + " ");        
-     }
-      current = current + 1;
+// Console.Clear();
+// void NNum(int arg)
+// {
+//     int current = 1;    
+//     while(current <= arg)
+//     {        
+//         if(current % 2 == 0)
+//      {
+//          Console.Write(current + " ");        
+//      }
+//       current = current + 1;
   
-    }    
-}
+//     }    
+// }
 
-Console.Write("Введите своё целое число: ");
-int num = Convert.ToInt32(Console.ReadLine());
-NNum(num);
+// Console.Write("Введите своё целое число: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// NNum(num);
 
 // Console.WriteLine("А вот и числа " + numbers);
 
