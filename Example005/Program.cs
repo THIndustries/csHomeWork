@@ -110,30 +110,30 @@ double[] DoubleArray (int size, int min, int max)
 void ShowDoubleArray (double[] array)
 {
     for(int i = 0; i < array.Length; i++)
-        Console.WriteLine($"array [{i + 1}] is {array[i]}");;
+        Console.WriteLine($"array [{i}] is {array[i]}");;
     Console.WriteLine();
 }
 
 double SearchDifference(double[] array)
 {
-    double min = 0;
-    double max = 0;    
-    double result = 0;
+    double myMin = array[0];
+    double myMax = array[0];   
+    double result = 0; 
     
-    for(int i = 0; i < array.Length - 1; i++)
-    {
-        min = array[i];
-        for(int j = i + 1; j < array.Length; j++)
-        max = array[j];
-            if(array[i] < array[min])
-            {
-                min = i;
-                // max = j;
-            }
-    }
-    result = max - min;
-    return result;
-}
+    for(int i = 0; i < array.Length; i++)
+    {            
+        if(array[i] < myMin)
+        {
+            myMin = array[i];
+        }
+        if(array[i] > myMax)
+        {
+            myMax = array[i];
+        }        
+    }  
+    result = myMax - myMin;
+    return result;                     
+}            
 
 
 Console.Write("Введите количество элементов: ");
@@ -143,8 +143,12 @@ int min = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите максимальное значение: ");
 int max = Convert.ToInt32(Console.ReadLine());
 
-double [] myArray = DoubleArray(size, min, max);
+double[] myArray = DoubleArray(size, min, max);
 ShowDoubleArray(myArray);
 
+// SearchDifference(myArray);
+// ShowDoubleArray(myArray);
+
 double result = SearchDifference(myArray);
-Console.Write(result);
+Console.Write($"Разница между максимальным и минимальным элементов массива = {result}");
+
