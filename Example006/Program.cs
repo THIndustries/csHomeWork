@@ -104,7 +104,7 @@ void FindDot(double b1, double k1, double b2, double k2)
     } 
     if(k1 != k2 && b1 != b2)
     {             
-    Console.WriteLine($"Точка пересечения двух прямых лежит в координате: x = {x}, y = {y}");
+    Console.WriteLine($"Точка пересечения двух прямых находится по координате: x = {x}, y = {y}");
     }
 }
 Console.Write("Введите b1: ");
