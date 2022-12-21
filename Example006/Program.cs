@@ -94,19 +94,16 @@ void FindDot(double b1, double k1, double b2, double k2)
     double x = (-b2 + b1)/(-k1 + k2);
     double y = k2 * x + b2; 
 
-    if(k1 == k2 && b1 != b2)
-    {
+    if(k1 == k2 && b1 != b2)    
         Console.WriteLine($"Эти прямые паралельны и никогда не пересекутся.");       
-    }   
-    if(k1 == k2 && b1 == b2)
-    {
+       
+    if(k1 == k2 && b1 == b2)    
         Console.WriteLine($"Это две прямые совпадают.");
-    } 
-    if(k1 != k2 && b1 != b2)
-    {             
-    Console.WriteLine($"Точка пересечения двух прямых находится по координате: x = {x}, y = {y}");
-    }
+    
+    if(k1 != k2 && b1 != b2 || b1 == b2)                
+        Console.WriteLine($"Точка пересечения двух прямых находится по координате: x = {x}, y = {y}");    
 }
+
 Console.Write("Введите b1: ");
 int b1 = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите k1: ");
